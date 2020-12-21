@@ -1,14 +1,6 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    /* Modal PopUp */ 
-    /*
-    font-size: 1.5em;
-    justify-content: center;
-    line-height: 1.5;
-    margin: 0;
-    padding: 1em 3em;
-    */
   }
   
   .topnav {
@@ -46,43 +38,54 @@ body {
  }
 
 /* Modal PopUp */
-#show {
-  position: fixed;
-  top: 30px;
-  left: 10px;
-}
-#show,
-#close {
-  background: #000000;
-  border: none;
-  color: #fff;
-  display: block;
-  font-size: 1em;
-  padding: 1em;
-  width: 200px;
-}
-#show:hover,
-#close:hover {
-  background: #888888;
-  cursor: pointer;
-}
 #dialog {
   display: none;
   position: fixed;
   top: 10vh;
   left: 10vw;
-  width: 80vw;
-  height: 80vh;
+  width: 80%;
+  height: 80%;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
   padding: 10px;
   text-align: center;
   z-index: 1;
   background-color: rgb(255, 255, 255);
-  color: #fff;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
 }
 #dialog.show {
-  align-items: center;
   display: flex;
   flex-direction: column;
+}
+
+#show:hover,
+#close:hover {
+  background: #ff8a00;
+  cursor: pointer;
+}
+#show {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+#close {
+  position: relative;
+}
+
+/* The Close Button */
+.close {
+  align-items: flex-end;
+  display: flex;
+  flex-direction:column;
+  color: #aaaaaa;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
 }
