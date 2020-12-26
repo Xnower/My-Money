@@ -27,7 +27,10 @@ function myFunction(ModalID) {
 }
 
 //Close modal sent by variable
-
+function ClosingModal(ModalID) {
+  var modal = document.getElementById(ModalID); // Get the modal
+  modal.style.display = "none";// Close the modal
+}
 
 //Only allow numbers and decimals
 function isNumberKey(evt)
