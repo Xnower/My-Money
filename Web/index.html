@@ -80,13 +80,32 @@ body, html {
 </header>
 
 <!-- Modal PopUp Dialog -->
-<div id='dialog'>
-  <label onclick='closeDialog()' class="close">&times;</label>
-  <div id="dialog-center">
 
-  <h1>hola</h1>
+  <div class="dialog-content">
+  <div id='dialog' class="login-box">
+    <label onclick='closeDialog()' class="close">&times;</label>
+    <h2>Ingresa los siguientes datos para evaluar tus finanzas</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="">
+        <label>Password</label>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+    </form>
+  </div>
+
 </div>
-</div>
+
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
