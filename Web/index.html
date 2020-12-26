@@ -80,26 +80,25 @@ body, html {
 </header>
 
 <!-- Modal PopUp Dialog -->
-
   <div class="dialog-content">
   <div id='dialog' class="login-box">
     <label onclick='closeDialog()' class="close">&times;</label>
-    <h2>Ingresa los siguientes datos para evaluar tus finanzas</h2>
+    <h3>Ingresa los siguientes datos para evaluar tus finanzas (Sólo números)</h3> 
+    
+    <br>
     <form>
+
       <div class="user-box">
-        <input type="text" name="" required="">
-        <label>Username</label>
+        <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+        <label>Ingresos mensuales</label>
       </div>
-      <div class="user-box">
-        <input type="password" name="" required="">
-        <label>Password</label>
-      </div>
+
       <a href="#">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Submit
+        <input class="dialog-submit" type="submit" value="Continuar">
       </a>
     </form>
   </div>

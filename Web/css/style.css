@@ -53,12 +53,7 @@ body {
   color: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
   padding: 40px;
-  transform: translate(-50%, -50%);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
 }
@@ -67,11 +62,20 @@ body {
   flex-direction: column;
 }
 
+.dialog-submit {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 /* The Close Button */
 .close {
   color: #000000;
   font-size: 50px;
-  font-weight: bold;
   display: inline-block;
   padding: 5px;
   cursor: pointer;
@@ -92,29 +96,7 @@ body {
   text-align: center;
 }
 
-.closing {
-  color: #aaaaaa;
-  font-size: 40px;
-  display: inline-block;
-  padding: 5px;
-  cursor: pointer;
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  transform: translate(0%, -80%);
-  display: none;
-}
-
-.closing:hover {
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-}
-
 /* Login Box */
-.login-box {
-
-}
-
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
@@ -126,9 +108,10 @@ body {
 position: relative;
 }
 
+/* Line under labels*/
 .login-box .user-box input {
   width: 100%;
-  padding: 10px 0;
+  padding: 3px 0;
   font-size: 16px;
   color: rgb(0, 0, 0);
   margin-bottom: 30px;
@@ -143,11 +126,12 @@ position: relative;
   left: 0;
   padding: 10px 0;
   font-size: 16px;
-  color: rgb(0, 0, 0)0, 0, 0);
+  color: rgb(0, 0, 0);
   pointer-events: none;
   transition: .5s;
 }
 
+/* Cool Button */
 .login-box .user-box input:focus ~ label,
 .login-box .user-box input:valid ~ label {
   top: -20px;
@@ -171,13 +155,13 @@ position: relative;
 }
 
 .login-box a:hover {
-  background: #aaaaaa;
+  background: #c9c9c9;
   color: rgb(0, 0, 0);
   border-radius: 5px;
-  box-shadow: 0 0 5px #aaaaaa,
-      0 0 25px #aaaaaa,
-      0 0 50px #aaaaaa,
-      0 0 100px #aaaaaa;
+  box-shadow: 0 0 5px #c9c9c9,
+      0 0 25px #c9c9c9,
+      0 0 50px #c9c9c9,
+      0 0 100px #c9c9c9;
 }
 
 .login-box a span {
