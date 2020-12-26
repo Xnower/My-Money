@@ -1,16 +1,20 @@
 
-
 window.addEventListener("click", function(event) {// When the user clicks anywhere outside of the modal, close it
-  var modal = document.getElementById("myModal");// Get the modal
-  var btn = document.getElementById("myBtn");// Get the button that opens the modal
-  var span = document.getElementsByClassName("close")[0];// Get the <span> element that closes the modal
-
+    var modal = document.getElementById("myModal");// Get the modal      
+    
   if (event.target == modal) {
     modal.style.display = "none";
   }
 })
 
+// Testing
+function Testing() {
+  const modals = ['myModal','modalGastos'];
 
+}
+
+
+//Open modal sent by variable
 function openModal(ModalID) { //Open modal sent by variable
   var modal = document.getElementById(ModalID); // Get the modal
   modal.style.display = "block";// Open the modal
