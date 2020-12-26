@@ -1,7 +1,5 @@
 function openModal() {
   var modal = document.getElementById("myModal"); // Get the modal
-  var btn = document.getElementById("myBtn");// Get the button that opens the modal
-  var span = document.getElementsByClassName("close")[0];// Get the <span> element that closes the modal
   modal.style.display = "block";// Open the modal
 }
 
@@ -22,10 +20,14 @@ window.addEventListener("click", function(event) {// When the user clicks anywhe
   }
 })
 
+//Open modal sent by variable
 function myFunction(ModalID) {
-  
-
+  var modal = document.getElementById(ModalID); // Get the modal
+  modal.style.display = "block";// Open the modal
 }
+
+//Close modal sent by variable
+
 
 //Only allow numbers and decimals
 function isNumberKey(evt)

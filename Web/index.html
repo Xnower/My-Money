@@ -67,6 +67,7 @@ body, html {
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
     <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
     <p><button id="openModal" onclick='openModal()' class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Evaluar tus finanzas</button></p>
+    <button onclick='myFunction("modalGastos")'>Click Me!</button>
   </div> 
 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
@@ -102,7 +103,38 @@ body, html {
         <span></span>
         <span></span>
         <span></span>
-        <input onclick='myFunction(formGastos); closeModal();' class="modal-submit" type="submit" value="Continuar">
+        <input onclick='closeModal(); myFunction("modalGastos");' class="modal-submit" type="submit" value="Continuar">
+      </a>
+    </form>
+  
+  </div>
+  </div>
+</div>
+
+<!-- The Second Modal -->
+<div id="modalGastos" class="modal">
+    
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span onclick='closeModal()' class="close">&times;</span>
+    <div class="modal-form">
+      <br>
+    <h3>Ingresa los siguientes datos para evaluar tus finanzas</h3>
+    <h5>(Sólo números)</h5>
+    <br>
+    <form action="">
+
+      <div class="form-box">
+        <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+        <label>Gastos báscios mensaules</label>
+      </div>
+
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <input onclick='myFunction(modalGastos); closeModal();' class="modal-submit" type="submit" value="Continuar">
       </a>
     </form>
   
