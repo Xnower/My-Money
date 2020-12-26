@@ -23,7 +23,7 @@ body {
   }
   
   .topnav a.active {
-    background-color: #5c5c5c;
+    background-color: #000000;
     color: white;
   }
 
@@ -87,7 +87,7 @@ body {
 
 .close:hover,
 .close:focus {
-  color: #aaaaaa;
+  color: #c9c9c9;
   text-decoration: none;
   cursor: pointer;
 }
