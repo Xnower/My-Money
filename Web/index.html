@@ -82,24 +82,17 @@ body, html {
 <!-- The Modal -->
 <div id="myModal" class="modal">
     
-
   <!-- Modal content -->
-
   <div class="modal-content">
     <span onclick='closeModal()' class="close">&times;</span>
-
-    
-    <div class="login-box">
-
-
+    <div class="modal-form">
       <br>
     <h3>Ingresa los siguientes datos para evaluar tus finanzas</h3>
     <h5>(Sólo números)</h5>
-    
     <br>
     <form action="">
 
-      <div class="user-box">
+      <div class="form-box">
         <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
         <label>Ingresos mensuales</label>
       </div>
@@ -109,14 +102,12 @@ body, html {
         <span></span>
         <span></span>
         <span></span>
-        <input onclick='showDialogDatos(); closeDialog();' class="modal-submit" type="submit" value="Continuar">
+        <input onclick='myFunction(formGastos); closeModal();' class="modal-submit" type="submit" value="Continuar">
       </a>
     </form>
   
   </div>
-
   </div>
-
 </div>
 
 
