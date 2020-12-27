@@ -1,36 +1,22 @@
 
 window.addEventListener("click", function(event) {// When the user clicks anywhere outside of the modal, close it
-    var modal = document.getElementById("myModal");// Get the modal      
-    
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-})
-
-// Function that get modal open and check when the user clicks anywhere outside of the modal, close it
-function Testing() {
-  const array1 = ['myModal', 'modalGastos'];
-
- 
 
   var miArray = ['myModal', 'modalGastos'];
-  miArray.forEach( function(valor, indice, array) {
 
-      
-      var modal = document.getElementById(valor); // Get the modal
-      console.log("Estos son los modals " + valor)
+  miArray.forEach( function(valor, indice, array) { // For que recorre cada modal en miArray
 
-      if (modal.style.display === "block") {
-        var modalOpen = document.getElementById(valor); // Get the modal
-        console.log("Este es el modal abierto " + valor)
+      var modal = document.getElementById(valor); // Get the current modal
+      // console.log("Estos son los modals " + valor)
+
+      if (modal.style.display === "block") { // si el current modal es igual a Block
+        var modalOpen = document.getElementById(valor); // Almacenar modal abierto en una variable
+
+        if (event.target == modalOpen) { // heck when the user clicks anywhere outside of the modal, close it
+          modalOpen.style.display = "none";
+        }
       }
-
-
   });
- 
-
-}
-
+})
 
 //Open modal sent by variable
 function openModal(ModalID) { //Open modal sent by variable
