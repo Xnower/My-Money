@@ -7,9 +7,27 @@ window.addEventListener("click", function(event) {// When the user clicks anywhe
   }
 })
 
-// Testing
+// Function that get modal open and check when the user clicks anywhere outside of the modal, close it
 function Testing() {
-  const modals = ['myModal','modalGastos'];
+  const array1 = ['myModal', 'modalGastos'];
+
+ 
+
+  var miArray = ['myModal', 'modalGastos'];
+  miArray.forEach( function(valor, indice, array) {
+
+      
+      var modal = document.getElementById(valor); // Get the modal
+      console.log("Estos son los modals " + valor)
+
+      if (modal.style.display === "block") {
+        var modalOpen = document.getElementById(valor); // Get the modal
+        console.log("Este es el modal abierto " + valor)
+      }
+
+
+  });
+ 
 
 }
 
