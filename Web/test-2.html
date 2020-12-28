@@ -1,75 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style-2.css">
-<script src="js/script-2.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style-2.css">
 </head>
 <body>
-
-<h2>Modal Example</h2>
-
-<!-- Trigger/Open The Modal -->
-<button onclick='openModal()' id="myBtn">Open Modal</button>
-
-  <br><br><br><br><br><br><br><br><br><br><br>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, veritatis. Praesentium ullam ad fuga inventore, magnam reprehenderit soluta accusantium similique maiores distinctio, asperiores temporibus, minus eius ex a ducimus quia?
-  <br><br><br><br><br><br><br><br><br><br><br>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, veritatis. Praesentium ullam ad fuga inventore, magnam reprehenderit soluta accusantium similique maiores distinctio, asperiores temporibus, minus eius ex a ducimus quia?
-  <br><br><br><br><br><br><br><br><br><br><br>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, veritatis. Praesentium ullam ad fuga inventore, magnam reprehenderit soluta accusantium similique maiores distinctio, asperiores temporibus, minus eius ex a ducimus quia?
-  <br><br><br><br><br><br><br><br><br><br><br>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, veritatis. Praesentium ullam ad fuga inventore, magnam reprehenderit soluta accusantium similique maiores distinctio, asperiores temporibus, minus eius ex a ducimus quia?
-  <br><br><br><br><br><br><br><br><br><br><br>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, veritatis. Praesentium ullam ad fuga inventore, magnam reprehenderit soluta accusantium similique maiores distinctio, asperiores temporibus, minus eius ex a ducimus quia?
-  <br><br><br><br><br><br><br><br><br><br><br>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, veritatis. Praesentium ullam ad fuga inventore, magnam reprehenderit soluta accusantium similique maiores distinctio, asperiores temporibus, minus eius ex a ducimus quia?
-  <br><br><br><br><br><br><br><br><br><br><br>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, veritatis. Praesentium ullam ad fuga inventore, magnam reprehenderit soluta accusantium similique maiores distinctio, asperiores temporibus, minus eius ex a ducimus quia?
-  <br><br><br><br><br><br><br><br><br><br><br>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, veritatis. Praesentium ullam ad fuga inventore, magnam reprehenderit soluta accusantium similique maiores distinctio, asperiores temporibus, minus eius ex a ducimus quia?
-  <br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span onclick='closeModal()' class="close">&times;</span>
-    <div class="login-box">
-
-
-      <br>
-    <h3>Ingresa los siguientes datos para evaluar tus finanzas</h3>
-    <h5>(Sólo números)</h5>
-    
-    <br>
-    <form action="">
-
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
       <div class="user-box">
-        <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
-        <label>Ingresos mensuales</label>
+        <input type="text" name="" required="">
+        <label>Username</label>
       </div>
-
+      <div class="user-box">
+        <input type="password" name="" required="">
+        <label>Password</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="">
+        <label>Password</label>
+      </div>
       <a href="#">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        <input onclick='showDialogDatos(); closeDialog();' class="modal-submit" type="submit" value="Continuar">
+        Submit
       </a>
     </form>
-  
   </div>
-
-  </div>
-
-</div>
-
-
-
 </body>
 </html>
