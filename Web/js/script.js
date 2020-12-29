@@ -18,6 +18,10 @@ window.addEventListener("click", function(event) {// When the user clicks anywhe
   });
 })
 
+function test(varia){
+  console.log(varia)
+}
+
 //Open modal sent by variable
 function openModal(ModalID) { //Open modal sent by variable
   var modal = document.getElementById(ModalID); // Get the modal
