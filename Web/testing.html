@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+    
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span onclick='closeModal("myModal")' class="close">&times;</span>
+      <div class="modal-form">
+        <br>
+      <h3>Ingresa los siguientes datos para evaluar tus finanzas</h3>
+      <h5>(Sólo números)</h5>
+      <br>
+      <form onsubmit='openAndcloseModal("modalGastos","myModal")'>
+  
+        <div class="form-box">
+          <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+          <label>Ingresos mensaules</label>
+        </div>
+  
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <button type="submit" class="modal-submit">Continuar</button>
+  
+        </a>
+      </form>
+    
+    </div>
+    </div>
+  </div>
+
+  <!-- The Second Modal -->
+<div id="modalGastos" class="modal">
+    
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span onclick='closeModal("modalGastos")' class="close">&times;</span>
+      <div class="modal-form">
+        <br>
+      <h3>Ingresa los siguientes datos para evaluar tus finanzas</h3>
+      <h5>(Sólo números)</h5>
+      <br>
+      <form onsubmit='openModal("myModal")'>
+  
+        <div class="form-box">
+          <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+          <label>Gastos básicos mensaules</label>
+        </div>
+        <div class="form-box">
+          <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+          <label>Ahorros mensaules</label>
+        </div>
+        <div class="form-box">
+          <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+          <label>Gastos personales mensaules</label>
+        </div>
+  
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <button type="submit" class="modal-submit">Continuar</button>
+        </a>
+      </form>
+    
+    </div>
+    </div>
+  </div>
+
+  <form onsubmit='openModal("modalGastos");return false'>
+  
+    <div class="form-box">
+      <input id="txtChar" onkeypress="return isNumberKey(event)" type="text">
+      <label>Gastos básicos mensaules</label>
+    </div>
+    <div class="form-box">
+      <input id="txtChar" onkeypress="return isNumberKey(event)" type="text">
+      <label>Ahorros mensaules</label>
+    </div>
+    <div class="form-box">
+      <input id="txtChar" onkeypress="return isNumberKey(event)" type="text">
+      <label>Gastos personales mensaules</label>
+    </div>
+
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <button type="submit">submit</button> 
+      <button type="button" class="modal-submit">Continuar</button>
+    </a>
+  </form>
+<p><button id="openModal" onclick='openModal("modalGastos")'>Evaluar tus finanzas</button></p>
+
+
+  
+</body>
+</html>

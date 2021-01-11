@@ -1,7 +1,7 @@
 
 window.addEventListener("click", function(event) {// When the user clicks anywhere outside of the modal, close it
 
-  var miArray = ['myModal', 'modalGastos'];
+  var miArray = ['myModal', 'modalGastos', 'modalResutado'];
 
   miArray.forEach( function(valor, indice, array) { // For que recorre cada modal en miArray
 
@@ -22,16 +22,34 @@ function test(varia){
   console.log(varia)
 }
 
+// Open and close modal sent by variables
+function openAndcloseModal(openModal,closeModal){
+var vOpenModal = document.getElementById(openModal);
+var vCloseModal = document.getElementById(closeModal);
+
+vCloseModal.style.display = "none";
+vOpenModal.style.display = "block";
+}
+
 //Open modal sent by variable
 function openModal(ModalID) { //Open modal sent by variable
   var modal = document.getElementById(ModalID); // Get the modal
   modal.style.display = "block";// Open the modal
+  return true;
 }
 
 //Close modal sent by variable
 function closeModal(ModalID) {
   var modal = document.getElementById(ModalID); // Get the modal
   modal.style.display = "none";// Close the modal
+  return true;
+}
+
+//Testing function
+function testing() {
+  var gastosBasicos = document.getElementById("gastosBasicos").value; // Get the value
+
+  alert("Gastos Básicos " + gastosBasicos)
 }
 
 //Only allow numbers and decimals

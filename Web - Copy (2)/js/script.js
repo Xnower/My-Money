@@ -22,6 +22,15 @@ function test(varia){
   console.log(varia)
 }
 
+// Open and close modal sent by variables
+function openAndcloseModal(openModal,closeModal){
+var vOpenModal = document.getElementById(openModal);
+var vCloseModal = document.getElementById(closeModal);
+
+vOpenModal.style.display = "block";
+vCloseModal.style.display = "none";
+}
+
 //Open modal sent by variable
 function openModal(ModalID) { //Open modal sent by variable
   var modal = document.getElementById(ModalID); // Get the modal

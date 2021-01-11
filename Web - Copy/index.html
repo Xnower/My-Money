@@ -66,7 +66,7 @@ body, html {
     <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
     <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><button id="" onclick='showDialog()' class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Evaluar tus finanzas</button></p>
+    <p><button id="openModal" onclick='openModal("myModal")' class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Evaluar tus finanzas</button></p>
   </div> 
 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
@@ -79,19 +79,22 @@ body, html {
   </div>
 </header>
 
-<!-- Dialog Ingresos -->
-  <div id='dialog' class="login-box">
-    <div class="dialog-content">
-    <label onclick='closeDialog()' class="close">&times;</label>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span onclick='closeModal("myModal")' class="close">&times;</span>
+    <div class="modal-form">
+      <br>
     <h3>Ingresa los siguientes datos para evaluar tus finanzas</h3>
     <h5>(Sólo números)</h5>
-    
     <br>
-    <form action="">
+    <form onsubmit='closeModal("myModal"); openModal("modalGastos")'>
 
-      <div class="user-box">
+      <div class="form-box">
         <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
-        <label>Ingresos mensuales</label>
+        <label>Ingresos mensaules</label>
       </div>
 
       <a href="#">
@@ -99,22 +102,54 @@ body, html {
         <span></span>
         <span></span>
         <span></span>
-        <input onclick='showDialogDatos(); closeDialog();' class="dialog-submit" type="submit" value="Continuar">
+        <button type="submit" class="modal-submit">Continuar</button>
+
       </a>
     </form>
+  
   </div>
-
+  </div>
 </div>
 
-<!-- Dialog Ingresos -->
-<div id="dialog-datos" class="login-box">
-  <div class="dialog-content">
-    <label onclick='closeDialogDatos()' class="close">&times;</label>
+<!-- The Second Modal -->
+<div id="modalGastos" class="modal">
+    
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span onclick='closeModal("modalGastos")' class="close">&times;</span>
+    <div class="modal-form">
+      <br>
     <h3>Ingresa los siguientes datos para evaluar tus finanzas</h3>
     <h5>(Sólo números)</h5>
+    <br>
+    <form onsubmit='closeModal("modalGastos");'>
 
+      <div class="form-box">
+        <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+        <label>Gastos básicos mensaules</label>
+      </div>
+      <div class="form-box">
+        <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+        <label>Ahorros mensaules</label>
+      </div>
+      <div class="form-box">
+        <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+        <label>Gastos personales mensaules</label>
+      </div>
+
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <button type="submit" class="modal-submit">Continuar</button>
+      </a>
+    </form>
+  
   </div>
-</div> 
+  </div>
+</div>
+
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
