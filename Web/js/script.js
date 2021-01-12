@@ -1,3 +1,9 @@
+//Globarl variables
+var iM = 0; // Get ingresos menusales
+var gB = 0; // Get gastos básicos
+var aM = 0; // Get ahorros mensuales
+var gP = 0; // Get gastos personales
+var tG = 0; // Get total gastos
 
 window.addEventListener("click", function(event) {// When the user clicks anywhere outside of the modal, close it
 
@@ -31,6 +37,8 @@ vCloseModal.style.display = "none";
 vOpenModal.style.display = "block";
 }
 
+
+
 //Open modal sent by variable
 function openModal(ModalID) { //Open modal sent by variable
   var modal = document.getElementById(ModalID); // Get the modal
@@ -45,11 +53,37 @@ function closeModal(ModalID) {
   return true;
 }
 
-//Testing function
-function testing() {
-  var gastosBasicos = document.getElementById("gastosBasicos").value; // Get the value
+//Matching function
+function match() {
+  iM = document.getElementById("ingresosMensuales").value; // Get ingresos mensuales
+  gB = document.getElementById("gastosBasicos").value; // Get gastos básicos
+  aM = document.getElementById("ahorrosMensuales").value; // Get ahorros mensuales
+  gP = document.getElementById("gastosPersonales").value; // Get gastos personales
 
-  alert("Gastos Básicos " + gastosBasicos)
+  tG = parseFloat(gB)+parseFloat(aM)+parseFloat(gP); // get total gastos
+
+  if (iM == tG) {
+    alert("Same")
+    return false;
+  } else {
+
+    if (confirm('Are you sure you want to save this thing into the database?')) {
+      // Save it!
+      console.log('Thing was saved to the database.');
+    } else {
+      // Do nothing!
+      console.log('Thing was not saved to the database.');
+    }
+    
+  return false;
+  }
+      
+  window.confirm("Testing")
+    document.getElementById("myText").value = "Johnny Bravo";
+ 
+
+
+
 }
 
 //Only allow numbers and decimals

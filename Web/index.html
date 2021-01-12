@@ -93,7 +93,7 @@ body, html {
     <form onsubmit='openAndcloseModal("modalGastos","myModal");return false'>
 
       <div class="form-box">
-        <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" required>
+        <input id="ingresosMensuales" onkeypress="return isNumberKey(event)" type="text" required>
         <label>Ingresos mensaules</label>
       </div>
 
@@ -122,7 +122,7 @@ body, html {
     <h3>Ingresa los siguientes datos para evaluar tus finanzas</h3>
     <h5>(Sólo números)</h5>
     <br>
-    <form onsubmit='testing();return false'>
+    <form onsubmit='match();return false'>
 
       <div class="form-box">
         <input id="gastosBasicos" onkeypress="return isNumberKey(event)" type="text" required>
