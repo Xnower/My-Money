@@ -5,6 +5,11 @@ var aM = 0; // Get ahorros mensuales
 var gP = 0; // Get gastos personales
 var tG = 0; // Get total gastos
 
+// Porcentajes
+var gBP = 0; // Get gastos básicos porcentaje
+var aMP = 0; // Get ahorros mensuales porcentaje
+var gPP = 0; // Get gastos personales porcentaje
+
 window.addEventListener("click", function(event) {// When the user clicks anywhere outside of the modal, close it
 
   var miArray = ['myModal', 'modalGastos', 'modalResutado'];
@@ -37,8 +42,6 @@ vCloseModal.style.display = "none";
 vOpenModal.style.display = "block";
 }
 
-
-
 //Open modal sent by variable
 function openModal(ModalID) { //Open modal sent by variable
   var modal = document.getElementById(ModalID); // Get the modal
@@ -63,27 +66,41 @@ function match() {
   tG = parseFloat(gB)+parseFloat(aM)+parseFloat(gP); // get total gastos
 
   if (iM == tG) {
-    alert("Same")
+    getUserType();
+    openAndcloseModal("modalResutado","modalGastos")
     return false;
   } else {
 
-    if (confirm('Are you sure you want to save this thing into the database?')) {
+    /*
+    if (confirm('Los valores ingresados no suman la cantidad de sus ingresos. ¿Desea continuar?')) {
+      openAndcloseModal("modalResutado","modalGastos")
       // Save it!
       console.log('Thing was saved to the database.');
     } else {
       // Do nothing!
       console.log('Thing was not saved to the database.');
     }
-    
-  return false;
+    */
+      alert("Los valores ingresados no suman la misma cantidad de sus ingresos.")
+      return false;
   }
-      
-  window.confirm("Testing")
-    document.getElementById("myText").value = "Johnny Bravo";
- 
 
+}
 
+// getUserType function
+// Cantidad a sacar porcentaje por el total dividido 100
+// Gastos básicos 50% - Ahorros 20% - Gastos Personales 30%
+function getUserType(){
 
+  gBP = 50 * parseFloat(iM) / 100 // Get gastos básicos porcentaje
+  aMP = 20 * parseFloat(iM) / 100 // Get ahorros mensuales porcentaje
+  gPP = 30 * parseFloat(iM) / 100 // Get gastos personales porcentaje
+
+  if (gB > gBP) {
+    document.getElementById("texto").innerHTML = "- Tal vez tienes más obligaciones de las que deberías tener.";
+    // alert("Tal vez tienes más obligaciones de las que deberías tener.")
+    return false;
+  }
 }
 
 //Only allow numbers and decimals
