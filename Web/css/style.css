@@ -253,4 +253,7 @@ bottom: 100%;
 
 .form-input{padding:8px;display:block;width:50%; margin-right: auto; margin-left: auto;}
 
+u:hover{
+  cursor: pointer;
+}
 
