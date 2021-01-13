@@ -90,7 +90,7 @@ body, html {
     <form onsubmit='openAndcloseModal("modalGastos","myModal");return false'>
 
       <div class="form-box">
-        <input id="ingresosMensuales" onkeypress="return isNumberKey(event)" type="text" required>
+        <input id="ingresosMensuales" type="number" min="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
         <label>Ingresos mensaules</label>
       </div>
 
@@ -122,15 +122,15 @@ body, html {
     <form onsubmit='match();return false'>
 
       <div class="form-box">
-        <input id="gastosBasicos" onkeypress="return isNumberKey(event)" type="text" required>
+        <input id="gastosBasicos" type="number" required min="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57"> 
         <label>Gastos básicos mensaules</label>
       </div>
       <div class="form-box">
-        <input id="ahorrosMensuales" onkeypress="return isNumberKey(event)" type="text" required>
+        <input id="ahorrosMensuales" type="number" required min="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
         <label>Ahorros mensaules</label>
       </div>
       <div class="form-box">
-        <input id="gastosPersonales" onkeypress="return isNumberKey(event)" type="text" required>
+        <input id="gastosPersonales" type="number" required min="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
         <label>Gastos personales mensaules</label>
       </div>
 
