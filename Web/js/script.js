@@ -12,7 +12,7 @@ var gPP = 0; // Get gastos personales porcentaje
 
 window.addEventListener("click", function(event) {// When the user clicks anywhere outside of the modal, close it
 
-  var miArray = ['myModal', 'modalGastos', 'modalResutado'];
+  var miArray = ['myModal', 'modalGastos', 'modalResutado', 'saberMas'];
 
   miArray.forEach( function(valor, indice, array) { // For que recorre cada modal en miArray
 
