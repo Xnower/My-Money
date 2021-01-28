@@ -71,17 +71,13 @@ function match() {
     return false;
   } else {
 
-    /*
     if (confirm('Los valores ingresados no suman la cantidad de sus ingresos. ¿Desea continuar?')) {
+      getUserType();
       openAndcloseModal("modalResutado","modalGastos")
-      // Save it!
-      console.log('Thing was saved to the database.');
+      return false;
     } else {
-      // Do nothing!
-      console.log('Thing was not saved to the database.');
+      // Cancel Pressed!
     }
-    */
-      alert("Los valores ingresados no suman la misma cantidad de sus ingresos.")
       return false;
   }
 
