@@ -10,6 +10,8 @@ var gBP = 0; // Get gastos básicos porcentaje
 var aMP = 0; // Get ahorros mensuales porcentaje
 var gPP = 0; // Get gastos personales porcentaje
 
+
+/*
 window.addEventListener("click", function(event) {// When the user clicks anywhere outside of the modal, close it
 
   var miArray = ['myModal', 'modalGastos', 'modalResutado', 'saberMas'];
@@ -28,6 +30,7 @@ window.addEventListener("click", function(event) {// When the user clicks anywhe
       }
   });
 })
+*/
 
 function test(varia){
   console.log(varia)
@@ -93,10 +96,31 @@ function getUserType(){
   gPP = 30 * parseFloat(iM) / 100 // Get gastos personales porcentaje
 
   if (gB > gBP) {
-    document.getElementById("texto").innerHTML = "- Tal vez tienes más obligaciones de las que deberías tener.";
-    // alert("Tal vez tienes más obligaciones de las que deberías tener.")
+    document.getElementById("result_1").innerHTML = "- Tus gastos báscios superan el 50% de tus ingresos, tal vez tienes más obligaciones de las que deberías tener, analizar tu obligaciones y minimizarlas, puede ayudarte.";
+
+      if (aM < aMP) {
+      document.getElementById("result_2").innerHTML = "- Tus ahorros están por debajo del 20% de tus ingresos puedes estar gastando más de lo que deberías. Ahorrar te puede ayudar en situaciones difíciles.";
+      return false;
+      
+      } else if (gP > gPP) {
+        document.getElementById("result_3").innerHTML = "- Tus gastos personales superan el 30% de tus ingresos, debes moderar moderara tus gastos pesroanles, comer más seguido en casa y reducir tus compras puede ayudarte.";
+        return false;
+      } 
+
+
+
     return false;
-  }
+  } 
+
+  console.log("testing")
+
+  if (gP > gPP) {
+    document.getElementById("result_3").innerHTML = "- Tus gastos personales superan el 30% de tus ingresos, debes moderar moderara tus gastos pesroanles, comer más seguido en casa y reducir tus compras puede ayudarte.";
+    return false;
+  } 
+
+
+
 }
 
 //Only allow numbers and decimals
