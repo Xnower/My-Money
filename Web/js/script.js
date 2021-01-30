@@ -126,7 +126,6 @@ console.log(gBP + " " + aMP + " " + gPP)
 
   points = parseFloat(points);
 
-
   if (points <= 0) {
     document.getElementById("result_points").innerHTML = "Aún hay mucho que puedes mejorar, controlar tus finanzas te impulsará a lograr tus objetivos financieros. ¡No te rindas, nosotros te ayudamos!";
   }
