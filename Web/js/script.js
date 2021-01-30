@@ -106,7 +106,7 @@ console.log(gBP + " " + aMP + " " + gPP)
   }
 
   if (aM < aMP) {
-    document.getElementById("result_2").innerHTML = "- Tus ahorros están por debajo del 20% de tus ingresos puedes estar gastando más de lo que deberías. Ahorrar te puede ayudar en situaciones difíciles.";
+    document.getElementById("result_2").innerHTML = "- Tus ahorros están por debajo del 20% de tus ingresos, puedes estar gastando más de lo que deberías. Ahorrar te puede ayudar en situaciones difíciles.";
     }
 
   if (aM >= aMP) {
