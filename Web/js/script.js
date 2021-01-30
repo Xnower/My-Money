@@ -96,30 +96,31 @@ function getUserType(){
   gPP = 30 * parseFloat(iM) / 100 // Get gastos personales porcentaje
 
   if (gB > gBP) {
-    document.getElementById("result_1").innerHTML = "- Tus gastos báscios superan el 50% de tus ingresos, tal vez tienes más obligaciones de las que deberías tener, analizar tu obligaciones y minimizarlas, puede ayudarte.";
+    document.getElementById("result_1").innerHTML = "- Tus gastos básicos superan el 50% de tus ingresos, tal vez tienes más obligaciones de las que deberías tener, analizar tu obligaciones y minimizarlas, puede ayudarte.";
+  }
 
-      if (aM < aMP) {
-      document.getElementById("result_2").innerHTML = "- Tus ahorros están por debajo del 20% de tus ingresos puedes estar gastando más de lo que deberías. Ahorrar te puede ayudar en situaciones difíciles.";
-      return false;
-      
-      } else if (gP > gPP) {
-        document.getElementById("result_3").innerHTML = "- Tus gastos personales superan el 30% de tus ingresos, debes moderar moderara tus gastos pesroanles, comer más seguido en casa y reducir tus compras puede ayudarte.";
-        return false;
-      } 
-
-
-
+  if (gP < gPP) {
+    document.getElementById("result_3").innerHTML = "- Tus gastos básicos están por debajo del 50% de tus ingresos. Tienes un buen balance en relación con tus gastos básicos y tus ingresos mensuales.";
     return false;
-  } 
+  }
 
-  console.log("testing")
+  if (aM < aMP) {
+    document.getElementById("result_2").innerHTML = "- Tus ahorros están por debajo del 20% de tus ingresos puedes estar gastando más de lo que deberías. Ahorrar te puede ayudar en situaciones difíciles.";
+    }
+
+    if (aM > aMP) {
+      document.getElementById("result_2").innerHTML = "- Tus ahorros superan el 20% de tus ingresos. Asegurate de encontrar dónde invertir parte de ellos, para generar una mayor rentabilidad.";
+      }
 
   if (gP > gPP) {
-    document.getElementById("result_3").innerHTML = "- Tus gastos personales superan el 30% de tus ingresos, debes moderar moderara tus gastos pesroanles, comer más seguido en casa y reducir tus compras puede ayudarte.";
+    document.getElementById("result_3").innerHTML = "- Tus gastos personales superan el 30% de tus ingresos, debes moderar moderada tus gastos personales, comer más seguido en casa y reducir tus compras puede ayudarte.";
     return false;
-  } 
+  }
 
-
+  if (gP < gPP) {
+    document.getElementById("result_3").innerHTML = "- Tus gastos personales están por debajo del 30% de tus ingresos. Recuerda encontrar un balance en tu vida social, salir de vez en cuando no está mal, pero exceder puede causarte problemas. ¡Sigue así!";
+    return false;
+  }
 
 }
 
