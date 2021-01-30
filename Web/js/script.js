@@ -135,7 +135,7 @@ console.log(gBP + " " + aMP + " " + gPP)
   }
 
   if (points == 3) {
-    document.getElementById("result_points").innerHTML = "¡Felicidades has conseguido un puntaje superior al del 60% de la gente que toma esta evaluación! Tal vez estás listo/a para empezar a invertir tus ahorros y no pierdan valor, debido a la inflación.";
+    document.getElementById("result_points").innerHTML = "¡Felicidades has conseguido un puntaje superior al del 60% de la gente que toma esta evaluación! Tal vez estás listo/a para empezar a invertir tus ahorros y evitar que pierdan valor, debido a la inflación.";
   }
 
 }
