@@ -11,10 +11,11 @@ var gBP = 0; // Get gastos básicos porcentaje
 var aMP = 0; // Get ahorros mensuales porcentaje
 var gPP = 0; // Get gastos personales porcentaje
 
-/*
+
 window.addEventListener("click", function(event) {// When the user clicks anywhere outside of the modal, close it
 
-  var miArray = ['myModal', 'modalGastos', 'modalResutado', 'saberMas'];
+  var miArray = ['publicidad'];
+  // var miArray = ['myModal', 'modalGastos', 'modalResutado', 'saberMas'];
 
   miArray.forEach( function(valor, indice, array) { // For que recorre cada modal en miArray
 
@@ -30,7 +31,7 @@ window.addEventListener("click", function(event) {// When the user clicks anywhe
       }
   });
 })
-*/
+
 
 function test(varia){
   console.log(varia)
@@ -135,7 +136,7 @@ console.log(gBP + " " + aMP + " " + gPP)
   }
 
   if (points == 3) {
-    document.getElementById("result_points").innerHTML = "¡Felicidades has conseguido un puntaje superior al del 60% de la gente que toma esta evaluación! Tal vez estás listo/a para empezar a invertir tus ahorros y evitar que pierdan valor, debido a la inflación.";
+    document.getElementById("result_points").innerHTML = "¡Felicidades has conseguido un puntaje superior al del 60% de la gente que toma esta evaluación! Tal vez estás listo/a para empezar a invertir tus ahorros y evitar que pierdan valor debido a la inflación.";
   }
 
 }
